@@ -1,0 +1,18 @@
+.btn{
+height:60px;
+width: 60px;
+padding: 20px;
+border-radius: 15px;
+border-color: rgb(91, 31, 160);
+
+}
+#svalue{
+    pointer-events: none;
+    height: 40px;
+    width: 280px;
+    margin-left: 5px;
+    margin-top: 7px;
+}
+.buttons{
+    padding:14px
+}

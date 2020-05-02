@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js learning</title>
+    <link rel="stylesheet" href="calcstyle.css" type="text/css">
+    
+</head>
+<body>
+    <div class="body">
+<div class="calc" style="width:300px; height:600px; background: grey; border: 3px solid blueviolet;">
+    <div class="output">
+<input type="text" id="svalue" style="font-size: 30px; font-family: fantasy; border: 2px solid slateblue;" >  
+
+</div>
+<hr>
+<div class="buttons">
+    <button class="btn" onmouseover="msover()" onclick="resulteq()">=</button>
+    <button class="btn" onclick="clearscr()">C</button>
+    <button class="btn" onclick="btnclick('+')">+</button>
+    <button class="btn" onclick="btnclick('*')">X</button>
+</div>
+
+<div class="buttons">
+    <button class="btn" class="btn" onclick="btnclick(7)">7</button>
+    <button class="btn" onclick="btnclick(8)">8</button>
+    <button class="btn" onclick="btnclick(9)">9</button>
+    <button class="btn" onclick="btnclick('/')">/</button>
+</div>
+<div class="buttons">
+    <button class="btn" onclick="btnclick(4)">4</button>
+    <button class="btn" onclick="btnclick(5)">5</button>
+    <button class="btn" onclick="btnclick(6)">6</button>
+    <button class="btn" onclick="btnclick('-')">-</button>
+
+</div>
+
+<div class="buttons">
+    <button class="btn" onclick="btnclick(0)">0</button>
+    <button class="btn" onclick="btnclick(1)">1</button>
+    <button class="btn" onclick="btnclick(2)">2</button>
+    <button class="btn" onclick="btnclick(3)">3</button>
+
+</div>
+<div id="box" style="height:100px;width=100px;background: rgb(16, 65, 80);"> hello this is <br>sebans calculator</div>
+<button id="jqrybtn">click</button>
+<input type=text id="val">
+<br>
+<label id="lbl" style="color: red;margin-left: 55px;">enter min 4 chars</label>
+</div>
+    </div>
+<script src="jsbasics.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
+<script>
+    $(document).ready(function() {
+        
+        $('#jqrybtn').click(function(){
+            // alert($('#val').length)
+            $('#box').fadeToggle(1000)
+
+        })
+
+        $('#jqrybtn').mouseenter(function(){
+            $(this).css({"background":"red"})
+        })
+
+        $('#val').blur(function(){
+            // $(this).css({"background":"red"})
+           var s=$('#val').val()
+           if(s.length<4){
+                $('#lbl').show()
+            }else{
+                $('#lbl').hide()
+            }
+
+        })
+
+
+    })
+
+</script>
+</body>
+</html>
